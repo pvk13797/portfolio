@@ -114,6 +114,7 @@ header > .menu_list{
 .menu_list > ul{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 16px;
     list-style-type: none;
 }
@@ -122,6 +123,19 @@ header > .menu_list{
     font-weight: 300;
     cursor: pointer;
     padding: 5px 10px;
+}
+.menu_list > ul > li > a.active{
+    text-decoration: underline;
+    text-underline-offset: 13px;
+}
+.menu_list > ul > li > a.contact{
+    display: flex;
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: var(--light-gray);
+    background-color: var(--parrot-green);
+    border-radius: 5px;
+    padding: 7px 20px;
 }
 .section{
     display: flex;

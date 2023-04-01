@@ -3,21 +3,20 @@
   <div class="logo">PVK</div>
   <div class="menu_list">
     <ul>
-      <li><a>Home</a></li>
-      <li><a>About</a></li>
-      <li><a>Skills</a></li>
-      <li><a>Projects</a></li>
-      <li><a>Education</a></li>
-      <li><a>Experience</a></li>
-      <li><a>Contact</a></li>
+      <li><a href="#home" [ngClass]="{'active': currentActive === 1}" (click)="scrollToElement(home)">Home</a></li>
+      <li><a href="#about" [ngClass]="{'active': currentActive === 2}" (click)="scrollToElement(about)">About</a></li>
+      <li><a href="#skills" [ngClass]="{'active': currentActive === 3}" (click)="scrollToElement(skills)">Skills</a></li>
+      <li><a href="#education" [ngClass]="{'active': currentActive === 4}" (click)="scrollToElement(education)">Education</a></li>
+      <li><a href="#experience" [ngClass]="{'active': currentActive === 5}" (click)="scrollToElement(experience)">Experience</a></li>
+      <li><a href="#" class="contact">Contact</a></li>
     </ul>
   </div>
 </header>
-<section class="section home_section" id="home">
+<section #home class="section home_section">
   <div class="home_content">
     <h1>Hey, I'm <span>Prasanna</span></h1>
     <p>MCA Graduate | 1.7 years of experience in Web Development | Sound understanding of HTML, CSS, Javascript, jQuery.</p>
-    <button class="about_me_btn">
+    <button class="about_me_btn" (click)="scrollToElement(about)">
       About Me <ion-icon name="chevron-forward-outline" role="img" class="md hydrated" aria-label="chevron forward outline"></ion-icon>
     </button>
   </div>
@@ -25,7 +24,7 @@
     <img src="assets/img/banner_img.png" alt="">
   </div>
 </section>
-<section class="section about_section" id="about">
+<section #about class="section about_section">
   <div class="about_img">
     <img src="assets/img/about.png" alt="my-img">
   </div>
@@ -65,7 +64,7 @@
     </li>
   </ul>
 </section>
-<section class="section skill_section">
+<section #skills class="section skill_section">
   <div class="skill_area">
     <h2>My Skills</h2>
     <p>Tiles in <span>blue</span> are some of my major skills</p>
@@ -85,7 +84,7 @@
     </div>
   </div>
 </section>
-<section class="section education_section">
+<section #education class="section education_section">
   <div class="education_area">
     <h2>Education</h2>
     <p>These are some of my past qualifications.</p>
@@ -109,7 +108,7 @@
     </div>
   </div>
 </section>
-<section class="section experience_section">
+<section #experience class="section experience_section">
   <div class="experience_area">
     <h2>Experience</h2>
     <p>These are the compaines where I've previously worked.</p>
