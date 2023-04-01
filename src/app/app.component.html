@@ -3,7 +3,7 @@
   <div class="logo">
     <img src="assets/img/ezgif.com-resize.png" alt="logo">
   </div>
-  <div class="menu_list">
+  <div class="menu_list" [class.active]="isActive">
     <ul>
       <li><a href="#home" [ngClass]="{'active': currentActive === 1}" (click)="scrollToElement(home)">Home</a></li>
       <li><a href="#about" [ngClass]="{'active': currentActive === 2}" (click)="scrollToElement(about)">About</a></li>
@@ -11,8 +11,10 @@
       <li><a href="#education" [ngClass]="{'active': currentActive === 4}" (click)="scrollToElement(education)">Education</a></li>
       <li><a href="#experience" [ngClass]="{'active': currentActive === 5}" (click)="scrollToElement(experience)">Experience</a></li>
       <li><a href="#" class="contact">Contact</a></li>
+      <ion-icon tabindex="9" name="close-outline" class="mobile_nav_icon" (click)="toggleNav()"></ion-icon>
     </ul>
   </div>
+  <ion-icon name="menu-outline" class="mobile_nav_icon" (click)="toggleNav()"></ion-icon>
 </header>
 <section #home class="section home_section">
   <div class="home_content">
@@ -45,22 +47,22 @@
   </div>
   <ul class="social_icons">
     <li>
-      <a href="https://www.linkedin.com/in/" class="linkedin">
+      <a href="https://www.linkedin.com/in/prasanna-venkatesh-kumar-r-t-v-074a82145/" class="linkedin">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
-      <a href="https://github.com" class="github">
+      <a href="https://github.com/pvk13797" class="github">
         <i class="fab fa-github"></i>
       </a>
     </li>
     <li>
-      <a href="https://www.instagram.com/" class="instagram">
+      <a href="https://www.instagram.com/prasanna_venkat_97/" class="instagram">
         <i class="fab fa-instagram"></i>
       </a>
     </li>
     <li>
-      <a href="https://twitter.com/" class="twitter">
+      <a href="https://twitter.com/pvk13797" class="twitter">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
@@ -157,22 +159,22 @@
       <h3>Reach me out on</h3>
       <ul class="social_icons">
         <li>
-          <a href="https://www.linkedin.com/in/" class="linkedin">
+          <a href="https://www.linkedin.com/in/prasanna-venkatesh-kumar-r-t-v-074a82145/" class="linkedin">
             <i class="fab fa-linkedin-in"></i>
           </a>
         </li>
         <li>
-          <a href="https://github.com" class="github">
+          <a href="https://github.com/pvk13797" class="github">
             <i class="fab fa-github"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/" class="instagram">
+          <a href="https://www.instagram.com/prasanna_venkat_97/" class="instagram">
             <i class="fab fa-instagram"></i>
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/" class="twitter">
+          <a href="https://twitter.com/pvk13797" class="twitter">
             <i class="fab fa-twitter"></i>
           </a>
         </li>

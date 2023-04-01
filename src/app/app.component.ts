@@ -9,6 +9,11 @@ export class AppComponent implements AfterViewInit{
   title = 'portfolio';
   scrolled: boolean = false;
   year = new Date().getFullYear();
+  isActive = false;
+
+  toggleNav(){
+    this.isActive = !this.isActive;
+  }
 
   @ViewChild('home') homeElement: ElementRef | any;
   @ViewChild('about') aboutElement: ElementRef | any;

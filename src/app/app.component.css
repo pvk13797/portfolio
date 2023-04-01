@@ -137,6 +137,13 @@ header > .menu_list{
     border-radius: 5px;
     padding: 7px 20px;
 }
+header .mobile_nav_icon {
+    padding-top: 5px;
+    width: 30px;
+    height: 30px;
+    color: var(--primary-color);
+    display: none;
+}
 .section{
     display: flex;
     flex-wrap: wrap;
@@ -686,6 +693,9 @@ footer > .copyrights{
     .about_section > .social_icons li a i{
         font-size: 25px;
     }
+    .experience_section > .experience_area p{
+        text-align: center;
+    }
     footer{
         flex-direction: column;
         height: max-content;
@@ -717,5 +727,89 @@ footer > .copyrights{
         padding: 25px;
         background-color: #000;
         border-radius: 50%;
+    }
+}
+
+@media only screen and (max-width: 910px){
+    header{
+        padding: 0 20px;
+    }
+    .section{
+        padding: 120px 20px;
+    }
+    header .mobile_nav_icon{
+        display: block;
+    }
+    header .menu_list .mobile_nav_icon{
+        position: absolute;
+        right: 50px;
+        top: 18px;
+    }
+    header > .menu_list{
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 50px 15px;
+        width: 50%;
+        max-width: 100%;
+        height: 100vh;
+        transform: translateX(100%);
+        background-color: rgba(255,255,255,.8);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        transition: all .3s;
+        z-index: 1;
+    }
+    header > .menu_list.active{
+        transform: translateX(0);
+    }
+    .menu_list > ul{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+    .menu_list > ul > li > a.contact{
+        margin: 0 0 0 10px;
+    }
+    .menu_list > ul > li > a.active{
+        text-decoration: none;
+        border-left: 3px solid var(--dark-gray);
+    }
+    .skill_section > .skill_area .skill_show{
+        justify-content: space-evenly;
+    }
+    .experience_section > .experience_show{
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0;
+    }
+    .experience_section > .experience_show ul{
+        width: 100%;
+    }
+    .experience_section > .experience_show ul li{
+        padding: 0 10px;
+    }
+    .experience_section > .experience_show .experience_description{
+        padding: 30px 0;
+    }
+    footer > .info .profile_info{
+        width: 100%;
+    }
+    footer > .info .reach_me{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 767px){
+    header .menu_list .mobile_nav_icon{
+        right: 22px;
+    }
+    .education_section > .education_show .card{
+        width: 100%;
+    }
+    .education_section > .education_area p{
+        text-align: center;
+    }
+    footer{
+        padding: 130px 20px 0 20px;
     }
 }
