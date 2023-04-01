@@ -126,7 +126,7 @@ header > .menu_list{
 }
 .menu_list > ul > li > a.active{
     text-decoration: underline;
-    text-underline-offset: 13px;
+    text-underline-offset: 10px;
 }
 .menu_list > ul > li > a.contact{
     display: flex;
@@ -233,6 +233,20 @@ header .mobile_nav_icon {
     color: var(--dark-gray);
     background-color: #e2e8f0;
 }
+.about_section > .about_me .resume{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--light-gray);
+    background-color: var(--parrot-green);
+}
 .about_section > .social_icons{
     display: flex;
     flex-wrap: wrap;
@@ -317,12 +331,18 @@ footer > .info .reach_me ul li a.twitter:hover{
 .skill_section > .skill_area p{
     margin: 0 0 32px 0;
 }
+.skill_section > .skill_area span{
+    color: #22d3ee;
+}
 .skill_section > .skill_area .skill_show{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    width: 55%;
+    max-width: 100%;
+    margin: auto;
     gap: 20px;
 }
 .skill_section > .skill_area .skill_show div{
@@ -806,8 +826,12 @@ footer > .copyrights{
     .education_section > .education_show .card{
         width: 100%;
     }
-    .education_section > .education_area p{
+    .education_section > .education_area p,
+    .skill_section > .skill_area p,
+    footer > .get_in_touch p,
+    .experience_section > .experience_area p{
         text-align: center;
+        line-height: 24px;
     }
     footer{
         padding: 130px 20px 0 20px;

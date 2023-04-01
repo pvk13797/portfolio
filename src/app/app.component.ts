@@ -15,6 +15,10 @@ export class AppComponent implements AfterViewInit{
     this.isActive = !this.isActive;
   }
 
+  openPDF(){
+    window.open('./assets/document/Resume.pdf', '_blank');
+  }
+
   @ViewChild('home') homeElement: ElementRef | any;
   @ViewChild('about') aboutElement: ElementRef | any;
   @ViewChild('skills') skillsElement: ElementRef | any;
