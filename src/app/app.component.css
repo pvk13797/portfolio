@@ -636,3 +636,86 @@ footer > .copyrights{
     text-align: center;
     width: 100%;
 }
+
+@media only screen and (max-width: 1024px){
+    .section{
+        flex-direction: column;
+        padding: 50px 80px;
+    }
+    .home_section{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .home_section > .home_content{
+        width: 100%;
+    }
+    .home_section > .home_content h1{
+        text-align: center;
+    }
+    .home_section > .home_content button{
+        margin: auto;
+    }
+    .about_section{
+        flex-direction: column;
+        text-align: center;
+    }
+    .about_section > .about_me{
+        width: 100%;
+        margin: 0;
+        border-radius: 20px;
+        background-color: var(--light-gray);
+    }
+    .about_section > .about_me .profession{
+        justify-content: center;
+    }
+    .about_section > .social_icons{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px;
+        margin: 30px 10px;
+    }
+    .about_section > .social_icons li a{
+        background-color: #E5E5E5;
+        padding: 15px;
+        border-radius: 50%;
+    }
+    .about_section > .social_icons li a i{
+        font-size: 25px;
+    }
+    footer{
+        flex-direction: column;
+        height: max-content;
+        padding: 130px 50px 0 50px;
+        justify-content: center;
+    }
+    footer > .get_in_touch{
+        width: 90%;
+        flex-direction: column;
+        top: -75px;
+    }
+    footer > .get_in_touch a{
+        margin: auto;
+        width: auto;
+    }
+    footer > .info{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        gap: 30px;
+    }
+    footer > .info .reach_me{
+        border-left: none;
+    }
+    footer > .info .reach_me ul{
+        gap: 25px;
+    }
+    footer > .info .reach_me ul li a{
+        padding: 25px;
+        background-color: #000;
+        border-radius: 50%;
+    }
+}
