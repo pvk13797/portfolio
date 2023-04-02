@@ -137,6 +137,10 @@ header > .menu_list{
     border-radius: 5px;
     padding: 7px 20px;
 }
+.menu_list > ul > li > a.contact:hover{
+    background-color: #22c55e;
+    color: #FFFFFF;
+}
 header .mobile_nav_icon {
     padding-top: 5px;
     width: 30px;
