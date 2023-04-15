@@ -10,7 +10,7 @@
       <li><a href="#skills" [ngClass]="{'active': currentActive === 3}" (click)="scrollToElement(skills)">Skills</a></li>
       <li><a href="#education" [ngClass]="{'active': currentActive === 4}" (click)="scrollToElement(education)">Education</a></li>
       <li><a href="#experience" [ngClass]="{'active': currentActive === 5}" (click)="scrollToElement(experience)">Experience</a></li>
-      <li><a href="#" class="contact">Contact</a></li>
+      <li><a href="#" class="contact" (click)="closeForm()">Contact</a></li>
       <ion-icon tabindex="9" name="close-outline" class="mobile_nav_icon" (click)="toggleNav()"></ion-icon>
     </ul>
   </div>
@@ -165,6 +165,37 @@
         <br><br>
         - Best team player award as a fresher.
       </p>
+    </div>
+  </div>
+</section>
+<section class="contact_form" [class.open]="isOpen">
+  <div class="form_area">
+    <div class="form_img">
+      <img src="assets/img/contact.png" alt="">
+    </div>
+    <div class="form_div">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="data_area">
+          <input id="name" type="text" formControlName="name" placeholder="Name">
+          <div *ngIf="contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched && submitted">
+            Name is required.
+          </div>
+        </div>
+        <div class="data_area">
+          <input id="email" type="email" formControlName="email" placeholder="Email">
+          <div *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched && submitted">
+            Email is required.
+          </div>
+        </div>
+        <div class="data_area">
+          <textarea id="message" formControlName="message" placeholder="Message"></textarea>
+          <div *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched && submitted">
+            Message is required.
+          </div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <ion-icon name="close-outline" class="close_icon md hydrated" role="img" aria-label="close outline" (click)="closeForm()"></ion-icon>
     </div>
   </div>
 </section>

@@ -531,6 +531,84 @@ footer > .info .reach_me ul li a.twitter:hover{
     margin: 0 0 10px 0;
     line-height: 28px;
 }
+.contact_form{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+    z-index: 3;
+    background-color: var(--fade-black);
+    scale: 0;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    width: 80%;
+    max-width: 100%;
+    height: max-content;
+}
+.contact_form.open{
+    scale: 1;
+}
+.contact_form > .form_area{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5rem;
+    position: relative;
+}
+.contact_form > .form_area .form_img{
+    width: 35%;
+    border-radius: 50%;
+}
+.contact_form > .form_area .form_div{
+    width: 60%;
+    padding: 20px;
+    background-color: rgba(255,255,255,.9);
+    border-radius: 10px;
+}
+.contact_form > .form_area .form_div form .data_area{
+    position: relative;
+}
+.contact_form > .form_area .form_div form .data_area input,
+.contact_form > .form_area .form_div form .data_area textarea{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 50px;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: 0;
+    background: 0 0;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    border-radius: 0;
+}
+.contact_form > .form_area .form_div form button{
+    display: flex;
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: var(--light-gray);
+    background-color: var(--parrot-green);
+    border-radius: 5px;
+    padding: 12px 20px;
+}
+.contact_form > .form_area .form_div .close_icon{
+    position: absolute;
+    right: -31px;
+    top: -31px;
+    color: var(--light-gray);
+    font-size: 28px;
+}
+.contact_form > .form_area .form_div .close_icon:hover{
+    color: var(--light-gray);
+    border-radius: 5px;
+    background-color: #dc2626;
+}
 footer{
     display: flex;
     align-items: center;
@@ -701,6 +779,9 @@ footer > .copyrights{
     .about_section > .about_me .profession{
         justify-content: center;
     }
+    .about_section > .about_me .resume{
+        margin: auto;
+    }
     .about_section > .social_icons{
         flex-direction: row;
         align-items: center;
@@ -719,6 +800,12 @@ footer > .copyrights{
     }
     .experience_section > .experience_area p{
         text-align: center;
+    }
+    .contact_form > .form_area .form_img{
+        display: none;
+    }
+    .contact_form > .form_area .form_div .close_icon{
+        color: var(--dark-gray);
     }
     footer{
         flex-direction: column;

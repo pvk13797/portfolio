@@ -1,4 +1,5 @@
 import { Component, HostListener, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,15 @@ export class AppComponent implements AfterViewInit{
   scrolled: boolean = false;
   year = new Date().getFullYear();
   isActive = false;
+  isOpen = false;
+  submitted = false;
 
   toggleNav(){
     this.isActive = !this.isActive;
+  }
+
+  closeForm(){
+    this.isOpen = !this.isOpen;
   }
 
   openPDF(){
@@ -60,6 +67,24 @@ export class AppComponent implements AfterViewInit{
       this.currentActive = 5;
     } else {
       this.currentActive = 0;
+    }
+  }
+
+  contactForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    message: new FormControl('', Validators.required)
+  });
+
+  onSubmit(){
+    this.submitted = true;
+
+    if (this.contactForm.invalid) {
+      return
+    }
+
+    if (this.submitted) {
+      alert('We Done It !');
     }
   }
   
