@@ -20,6 +20,7 @@ export class AppComponent implements AfterViewInit{
 
   closeForm(){
     this.isOpen = !this.isOpen;
+    this.isActive = false;
   }
 
   openPDF(){
@@ -57,14 +58,19 @@ export class AppComponent implements AfterViewInit{
 
     if (window.pageYOffset >= this.homeOffset && window.pageYOffset < this.aboutOffset) {
       this.currentActive = 1;
+      this.isActive = false;
     } else if (window.pageYOffset >= this.aboutOffset && window.pageYOffset < this.skillsOffset) {
       this.currentActive = 2;
+      this.isActive = false;
     } else if (window.pageYOffset >= this.skillsOffset && window.pageYOffset < this.educationOffset) {
       this.currentActive = 3;
+      this.isActive = false;
     } else if (window.pageYOffset >= this.educationOffset && window.pageYOffset < this.experienceOffset) {
       this.currentActive = 4;
+      this.isActive = false;
     } else if (window.pageYOffset >= this.experienceOffset) {
       this.currentActive = 5;
+      this.isActive = false;
     } else {
       this.currentActive = 0;
     }
@@ -85,6 +91,7 @@ export class AppComponent implements AfterViewInit{
 
     if (this.submitted) {
       alert('We Done It !');
+      this.contactForm.reset();
     }
   }
   
