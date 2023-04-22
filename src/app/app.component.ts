@@ -92,6 +92,7 @@ export class AppComponent implements AfterViewInit{
     if (this.submitted) {
       alert('We Done It !');
       this.contactForm.reset();
+      this.isOpen = false;
     }
   }
   
