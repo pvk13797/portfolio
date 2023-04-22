@@ -10,6 +10,10 @@ img{
     width: auto;
     max-width: 100%;
 }
+.error{
+    color: red;
+    font-size: 14px;
+}
 :root{
     --font-family: 'Poppins', sans-serif;
     --h1-font-family: 'Catamaran', sans-serif; 
@@ -540,7 +544,7 @@ footer > .info .reach_me ul li a.twitter:hover{
     margin: auto;
     padding: 40px;
     border-radius: 10px;
-    z-index: 3;
+    z-index: 99;
     background-color: var(--fade-black);
     scale: 0;
     transition: all .5s;
@@ -571,6 +575,7 @@ footer > .info .reach_me ul li a.twitter:hover{
 }
 .contact_form > .form_area .form_div form .data_area{
     position: relative;
+    margin-bottom: 42px;
 }
 .contact_form > .form_area .form_div form .data_area input,
 .contact_form > .form_area .form_div form .data_area textarea{
@@ -578,7 +583,7 @@ footer > .info .reach_me ul li a.twitter:hover{
     padding: 10px 0;
     font-size: 16px;
     color: #333;
-    margin-bottom: 50px;
+    margin-bottom: 8px;
     border: none;
     border-bottom: 1px solid #333;
     outline: 0;
@@ -801,10 +806,19 @@ footer > .copyrights{
     .experience_section > .experience_area p{
         text-align: center;
     }
+    .contact_form{
+        padding: 0;
+        width: 90%;
+    }
     .contact_form > .form_area .form_img{
         display: none;
     }
+    .contact_form > .form_area .form_div{
+        width: 100%;
+    }
     .contact_form > .form_area .form_div .close_icon{
+        top: 5px;
+        right: 5px;
         color: var(--dark-gray);
     }
     footer{

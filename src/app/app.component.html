@@ -19,7 +19,7 @@
 <section #home class="section home_section">
   <div class="home_content">
     <h1>Hey, I'm <span>Prasanna</span></h1>
-    <p>MCA Graduate | 1.7 years of experience in Web Development | Sound understanding of HTML, CSS, Javascript, jQuery.</p>
+    <p>MCA Graduate | 1.8 years of experience in Web Development | Sound understanding of HTML, CSS, Javascript, jQuery.</p>
     <button class="about_me_btn" (click)="scrollToElement(about)">
       About Me <ion-icon name="chevron-forward-outline" role="img" class="md hydrated" aria-label="chevron forward outline"></ion-icon>
     </button>
@@ -39,7 +39,7 @@
       <p>MEAN Stack Developer</p>
     </div>
     <br>
-    <p>Currently working as a Web Developer with 1.7 years of experience in HTML, CSS, jQuery.
+    <p>Currently working as a Web Developer with 1.8 years of experience in HTML, CSS, jQuery.
       Well experienced in developing Responsive & Interactive websites.
       Have some knowledge in angular and interested to work in angular framework.
     </p>
@@ -177,19 +177,19 @@
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="data_area">
           <input id="name" type="text" formControlName="name" placeholder="Name">
-          <div *ngIf="contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched && submitted">
+          <div class="error" *ngIf="contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched && submitted">
             Name is required.
           </div>
         </div>
         <div class="data_area">
           <input id="email" type="email" formControlName="email" placeholder="Email">
-          <div *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched && submitted">
+          <div class="error" *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched && submitted">
             Email is required.
           </div>
         </div>
         <div class="data_area">
           <textarea id="message" formControlName="message" placeholder="Message"></textarea>
-          <div *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched && submitted">
+          <div class="error" *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched && submitted">
             Message is required.
           </div>
         </div>
