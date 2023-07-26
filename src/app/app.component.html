@@ -19,7 +19,7 @@
 <section #home class="section home_section">
   <div class="home_content">
     <h1>Hey, I'm <span>Prasanna</span></h1>
-    <p>MCA Graduate | 1.8 years of experience in Web Development | Sound understanding of HTML, CSS, Javascript, jQuery.</p>
+    <p>MCA Graduate | 1.10 years of experience in Web Development | Sound understanding of HTML, CSS, Javascript, jQuery.</p>
     <button class="about_me_btn" (click)="scrollToElement(about)">
       About Me <ion-icon name="chevron-forward-outline" role="img" class="md hydrated" aria-label="chevron forward outline"></ion-icon>
     </button>
@@ -39,7 +39,7 @@
       <p>MEAN Stack Developer</p>
     </div>
     <br>
-    <p>Currently working as a Web Developer with 1.8 years of experience in HTML, CSS, jQuery.
+    <p>Currently working as a Web Developer with 1.10 years of experience in HTML, CSS, jQuery.
       Well experienced in developing Responsive & Interactive websites.
       Have some knowledge in angular and interested to work in angular framework.
     </p>
@@ -92,19 +92,19 @@
         <img src="assets/img/jquery.svg" alt="jQuery">
         <p>jQuery</p>
       </div>
-      <div class="major">
+      <!-- <div class="major">
         <img src="assets/img/mongodb.svg" alt="mongodb">
         <p>MongoDB</p>
       </div>
       <div class="major">
         <img src="assets/img/expressjs.png" alt="expressjs">
         <p>Express JS</p>
-      </div>
+      </div> -->
       <div class="major">
         <img src="assets/img/angular.svg" alt="angular">
         <p>Angular</p>
       </div>
-      <div class="major">
+      <!-- <div class="major">
         <img src="assets/img/nodejs.svg" alt="nodejs">
         <p>NodeJs</p>
       </div>
@@ -115,7 +115,7 @@
       <div class="minor">
         <img src="assets/img/sass.png" alt="sass">
         <p>Sass</p>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -150,18 +150,39 @@
   </div>
   <div class="experience_show">
     <ul class="experience_list">
-      <li class="company_name active">Siam Computing</li>
+      <li class="zoho" [class.active]="activeTab === 1" (click)="setActiveTab(1)">Zoho</li>
+      <li class="gofrugal" [class.active]="activeTab === 2" (click)="setActiveTab(2)">Gofrugal Technologies</li>
+      <li class="siam" [class.active]="activeTab === 3" (click)="setActiveTab(3)">Siam Computing</li>
     </ul>
-    <div class="experience_description">
+    <div *ngIf="activeTab === 1" class="gofrugal experience_description">
+      <h4>Zoho</h4>
+      <span>From July 2023 - to Present</span>
+      <p><b>Responsbilities:</b>
+        <br><br>
+        - Developing new components based on design specifications.<br>
+        - Understanding existing code and optimization in terms of functionality and performance.<br>
+      </p>
+    </div>
+    <div *ngIf="activeTab === 2" class="gofrugal experience_description">
+      <h4>Gofrugal Technologies</h4>
+      <span>From December 2022 - to June 2023</span>
+      <p><b>Responsbilities:</b>
+        <br><br>
+        - With expertise in enhancing and optimizing gofrugal website.<br>
+        - Implementing design requirements and integrating server-developed APIs to ensure seamless functionality.<br>
+        - Continuously strive to deliver high-quality solutions that align with business objectives & enhance overall UI experience.<br>
+      </p>
+    </div>
+    <div *ngIf="activeTab === 3" class="siam experience_description">
       <h4>Siam Computing</h4>
       <span>From September 2021 - to November 2022</span>
-      <p>Responsbilities:
+      <p><b>Responsbilities:</b>
         <br><br>
         - Analyzing the requirements and design along with the team.<br>
         - Create documents for Time Estimations, Planning & Typography.<br>
         - To develop & deploy the websites with responsive.<br>
         <br><br>
-        Awards:
+        <b>Awards:</b>
         <br><br>
         - Best team player award as a fresher.
       </p>
