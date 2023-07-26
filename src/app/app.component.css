@@ -509,6 +509,7 @@ footer > .info .reach_me ul li a.twitter:hover{
     list-style: none;
 }
 .experience_section > .experience_show ul li:hover{
+    cursor: pointer;
     background-color: rgba(0,0,0,.04);
     transition: all .2s;
     -webkit-transition: all .2s;
@@ -915,6 +916,11 @@ footer > .copyrights{
         padding: 20px 0;
     }
     .experience_section > .experience_show ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
         width: 100%;
     }
     .experience_section > .experience_show ul li{

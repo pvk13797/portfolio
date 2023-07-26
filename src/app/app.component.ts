@@ -24,7 +24,7 @@ export class AppComponent implements AfterViewInit{
   }
 
   openPDF(){
-    window.open('./assets/document/Resume.pdf', '_blank');
+    window.open('./assets/document/PVKResumeJul2023.pdf', '_blank');
   }
 
   @ViewChild('home') homeElement: ElementRef | any;
@@ -95,5 +95,9 @@ export class AppComponent implements AfterViewInit{
       this.isOpen = false;
     }
   }
-  
+  activeTab = 1;
+
+  setActiveTab(tabName: number){
+    this.activeTab = tabName;
+  }
 }
