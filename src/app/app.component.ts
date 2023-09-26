@@ -54,7 +54,7 @@ export class AppComponent implements AfterViewInit{
 
   @HostListener('window:scroll', [])
   onWindowScroll(){
-    this.scrolled = window.scrollY > 50;
+    this.scrolled = window.scrollY > 100;
 
     if (window.pageYOffset >= this.homeOffset && window.pageYOffset < this.aboutOffset) {
       this.currentActive = 1;
