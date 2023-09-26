@@ -68,6 +68,7 @@ button{
 }
 .bg_img{
     background-image: url(../assets/img/bg-banner.png);
+    background-repeat: repeat;
     position: absolute;
     top: 0;
     right: 0;
@@ -297,7 +298,11 @@ footer > .info .reach_me ul li a.linkedin:hover{
 .about_section > .social_icons li a.github:focus,
 .about_section > .social_icons li a.github:hover,
 footer > .info .reach_me ul li a.github:focus,
-footer > .info .reach_me ul li a.github:hover{
+footer > .info .reach_me ul li a.github:hover,
+.about_section > .social_icons li a.twitter:focus,
+.about_section > .social_icons li a.twitter:hover,
+footer > .info .reach_me ul li a.twitter:focus,
+footer > .info .reach_me ul li a.twitter:hover{
     background-color: #252525;
 }
 .about_section > .social_icons li a.instagram:focus,
@@ -305,12 +310,6 @@ footer > .info .reach_me ul li a.github:hover{
 footer > .info .reach_me ul li a.instagram:focus,
 footer > .info .reach_me ul li a.instagram:hover{
     background: radial-gradient(circle at 30% 110%,#ffdb8b 0,#ee653d 25%,#d42e81 50%,#a237b6 75%,#3e5fbc 100%);
-}
-.about_section > .social_icons li a.twitter:focus,
-.about_section > .social_icons li a.twitter:hover,
-footer > .info .reach_me ul li a.twitter:focus,
-footer > .info .reach_me ul li a.twitter:hover{
-    background-color: #1DA1F2;
 }
 .about_section > .social_icons li a i{
     font-size: 32px;
@@ -354,7 +353,7 @@ footer > .info .reach_me ul li a.twitter:hover{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 55%;
+    width: 90%;
     max-width: 100%;
     margin: auto;
     gap: 20px;
