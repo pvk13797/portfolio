@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { IonicModule } from '@ionic/angular';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent
